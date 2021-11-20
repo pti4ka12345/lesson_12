@@ -30,4 +30,5 @@ def page_catalog():
 def page_settings():
    return "<h1>Страничка настроек</h1>"
 
-app.run()
+if __name__ == "__main__":
+    app.run()
