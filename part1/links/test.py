@@ -40,17 +40,17 @@ class SettingsTestCase(SkyproTestCase, ResponseTestsMixin):
         html_paragraph = soup.p
         self.assertIsNotNone(
             html_paragraph,
-            "%@Проверьте, что главная страница содержит тег абзатц")
+            "%@Проверьте, что главная страница содержит тег абзац")
         p_elements = soup.find_all('p')
         len_elements = len(p_elements)
         self.assertEqual(
             len_elements, 2,
-            ("%@Проверьте что добавили 2 абзатца на главную страницу."
+            ("%@Проверьте что добавили 2 абзаца на главную страницу."
              f" Должно быть 2, тогда как у вас {len_elements}"))
         for element in p_elements:
             self.assertIsNotNone(
                 element.a,
-                "%@Проверьте, что в ваши абзатцах содержатся теги со ссылками"
+                "%@Проверьте, что в ваши абзацах содержатся теги со ссылками"
             )
             href = element.a.attrs.get('href')
             self.assertIsNotNone(
@@ -81,10 +81,10 @@ class SettingsTestCase(SkyproTestCase, ResponseTestsMixin):
         html_paragraph = soup.p
         self.assertIsNotNone(
             html_paragraph,
-            "%@Проверьте, что страница с курсами содержит тег абзатц")
+            "%@Проверьте, что страница с курсами содержит тег абзац")
         self.assertIsNotNone(
             html_paragraph.a,
-            "%@Проверьте, что в абзатце на странице с курсами содержится тег со ссылкой"
+            "%@Проверьте, что в абзаце на странице с курсами содержится тег со ссылкой"
         )
         href = html_paragraph.a.attrs.get('href')
         self.assertIsNotNone(
@@ -135,10 +135,10 @@ class SettingsTestCase(SkyproTestCase, ResponseTestsMixin):
         html_paragraph = soup.p
         self.assertIsNotNone(
             html_paragraph,
-            "%@Проверьте, что страница со студентами содержит тег абзатц")
+            "%@Проверьте, что страница со студентами содержит тег абзац")
         self.assertIsNotNone(
             html_paragraph.a,
-            "%@Проверьте, что в абзатце на странице со студентами содержится тег со ссылкой"
+            "%@Проверьте, что в абзаце на странице со студентами содержится тег со ссылкой"
         )
         href = html_paragraph.a.attrs.get('href')
         self.assertIsNotNone(

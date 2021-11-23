@@ -4,7 +4,7 @@ import unittest
 import inspect
 import marshmallow
 import json
-
+from bs4 import BeautifulSoup
 
 class DataBaseTestsMixin:
     """
@@ -323,3 +323,15 @@ class SchemaTestsMixin(ResponseTestsMixin):
                 f"%@Проверьте, что правильно определён тип "
                 f"у поля {field} схемы {student_schema}."
                 f"Попробуйте использовать {type.__class__}")
+
+
+class TemplateMixin(ResponseTestsMixin):
+    def check_code_and_get_soup(self, url, code):
+        response = self.app.get(url)
+        self.assertTrue(
+            response.status_code ==  code,
+            f"%@Проверьте, что адрес 127.0.0.1:5000'{url}' доступен из браузера"
+        )
+
+        soup = BeautifulSoup(response.get_data(True), "html.parser")
+        return soup
