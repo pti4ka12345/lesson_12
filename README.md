@@ -51,11 +51,12 @@ Pycharm может предложить вам сделать это после 
 - part2/ready_template
 - part2/restaurant_profile
 - part2/meal_card
-- part2/discounts
 - part2/search_result
+- part2/discounts
 - part2/order_status
 - part2/meal_category
-
+- part2/high_rating
+- part2/get_payment
 
 Задачи описаны в комментариях в файле main.py
 В текущих заданиях вы будете учиться использовать библиотеку Flask, и учиться
