@@ -24,7 +24,7 @@ class SettingsTestCase(SkyproTestCase, TemplateMixin):
         html_div = soup.div
         self.assertIsNotNone(
             html_div,
-            "%@Проверьте, что правильно добавили блоки в тег main"
+            "%@Проверьте, что правильно добавили блоки (div) в тег main"
         )
         html_div_list = soup.main.find_all('div')
         ln_div_list = len(html_div_list)

@@ -24,16 +24,13 @@ if __name__=="__main__":
 #   </head>
 #   <body>
 #     <main style ="width: 320px; margin: 0 auto;">
-#       <h2>Найдено:</h2>
-#         <ul>
-#          {% for item in discounts %}
-#             <div>
-#               <h3>{{ item.title }}</h3>
-#               <p>Скидка: {{ item.discount }}</p>
-#               <p>Код: {{ item.code }}</p>
-#             </div>
-#          {% endfor %}
-#       </ul> 
+#       {% for item in discounts %}
+#          <div>
+#            <h3>{{ item.title }}</h3>
+#            <p>Скидка: {{ item.discount }}</p>
+#            <p>Код: {{ item.code }}</p>
+#          </div>
+#       {% endfor %}
 #     </main>
 #   </body>
 # </html>

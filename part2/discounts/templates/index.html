@@ -6,16 +6,11 @@
   </head>
   <body>
     <main style ="width: 320px; margin: 0 auto;">
-      <h2>Найдено:</h2>
-        <ul>
-         {% for item in discounts %}
-            <div>
-              <h3>{{ item.title }}</h3>
-              <p>Скидка: {{ item.discount }}</p>
-              <p>Код: {{ item.code }}</p>
-            </div>
-         {% endfor %}
-      </ul> 
+      <div>
+        <h3>Треть на доставку</h3>
+        <p>Скидка: 30%</p>
+        <p>Код: minidelivery</p>
+      </div>
     </main>
   </body>
 </html>
