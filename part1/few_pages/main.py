@@ -16,9 +16,18 @@
 # P.S. В данном задании не используйте язык разметки html.
 #      тестироваться будет только текст.
 
-app = # TODO инициализируйте приложение здесь
+from flask import Flask
+app = Flask(__name__)
 
-# TODO напишите view-функции здесь
+@app.route('/hello/')
+def index():
+    if __name__ == "__main__":
+    return 'Это главная страница!'
 
-if __name__ == "__main__":
-    app.run()
+app.run()
+# app = # TODO инициализируйте приложение здесь
+#
+# # TODO напишите view-функции здесь
+#
+# if __name__ == "__main__":
+#     app.run()
